@@ -16,7 +16,7 @@ const SEOMetadata = ({
   imageUrl = "https://lovable.dev/opengraph-image-p98pqg.png",
   url
 }: SEOMetadataProps) => {
-  const siteUrl = url || window.location.href;
+  const siteUrl = url || (typeof window !== 'undefined' ? window.location.href : '');
   const fullTitle = `${title} | EssenceFameFace`;
   const defaultDescription = "EssenceFameFace is a community agency helping models and content creators secure brand deals and monetize their content. Join our expert team to create quality ad videos for brands.";
   

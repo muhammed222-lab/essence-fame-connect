@@ -34,7 +34,9 @@ const NotFound = () => {
     document.head.appendChild(script);
     
     return () => {
-      document.head.removeChild(script);
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
     };
   }, [location.pathname]);
 
