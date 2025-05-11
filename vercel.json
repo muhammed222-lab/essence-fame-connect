@@ -1,14 +1,11 @@
 {
   "version": 2,
-  "routes": [
+  "builds": [
     {
-      "src": "/.*",
-      "dest": "/index.html",
-      "status": 200
+      "src": "dist/index.html",
+      "use": "@vercel/static"
     }
   ],
-  "cleanUrls": true,
-  "trailingSlash": false,
   "rewrites": [
     {
       "source": "/(.*)",
