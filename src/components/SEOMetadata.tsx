@@ -12,7 +12,7 @@ const SEOMetadata = ({
   title,
   description,
   keywords = "brand deals, content creators, influencer marketing, monetization, content monetization, models, creative agency, influencer agency",
-  imageUrl = "https://lovable.dev/opengraph-image-p98pqg.png",
+  imageUrl = "/favicon.png",
   url,
 }: SEOMetadataProps) => {
   const siteUrl =
