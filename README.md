@@ -1,22 +1,36 @@
-# Welcome to your Lovable project
+# Welcome to your essencefameface
+
+project
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/f6ec1c62-f615-426d-b24e-b268378c7167
+**URL**: https://essencefameface
+
+.dev/projects/f6ec1c62-f615-426d-b24e-b268378c7167
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
+\*\*Use essencefameface
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f6ec1c62-f615-426d-b24e-b268378c7167) and start prompting.
+\*\*
 
-Changes made via Lovable will be committed automatically to this repo.
+Simply visit the [essencefameface
+
+Project](https://essencefameface
+
+.dev/projects/f6ec1c62-f615-426d-b24e-b268378c7167) and start prompting.
+
+Changes made via essencefameface
+
+will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in essencefameface
+
+.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -62,12 +76,20 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/f6ec1c62-f615-426d-b24e-b268378c7167) and click on Share -> Publish.
+Simply open [essencefameface
 
-## Can I connect a custom domain to my Lovable project?
+](https://essencefameface
+
+.dev/projects/f6ec1c62-f615-426d-b24e-b268378c7167) and click on Share -> Publish.
+
+## Can I connect a custom domain to my essencefameface
+
+project?
 
 Yes, you can!
 
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Read more here: [Setting up a custom domain](https://docs.essencefameface
+
+.dev/tips-tricks/custom-domain#step-by-step-guide)
