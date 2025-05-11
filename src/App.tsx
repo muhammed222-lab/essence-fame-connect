@@ -12,12 +12,17 @@ import Contract from "./pages/Contract";
 import Registration from "./pages/Registration";
 import CustomerService from "./pages/CustomerService";
 import NotFound from "./pages/NotFound";
+import SEOMetadata from "./components/SEOMetadata";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
+      <SEOMetadata 
+        title="Community Agency for Content Creators & Models"
+        description="EssenceFameFace is a community agency that helps models and content creators secure brand deals and monetize your content. Join our expert team to create quality ad videos for brands."
+      />
       <Toaster />
       <Sonner />
       <BrowserRouter>
