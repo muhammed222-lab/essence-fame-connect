@@ -140,6 +140,7 @@ const Contract = () => {
               <p className="mb-4">
                 Our legal team is available to clarify any contract terms.
               </p>
+
               <Button
                 variant="outline"
                 className="border-essence-cream text-black hover:bg-gray-400"
