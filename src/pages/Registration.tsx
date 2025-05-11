@@ -1,12 +1,9 @@
 
-import Navbar from "@/components/Navbar";
 import VideoSection from "@/components/VideoSection";
 
 const Registration = () => {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
-      
       <div className="container mx-auto py-16 px-6">
         <h1 className="text-4xl font-bold text-essence-black mb-6 text-center">Registration Guide</h1>
         <div className="h-1 w-24 bg-essence-orange mx-auto mb-12"></div>

@@ -1,13 +1,10 @@
 
-import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import VideoSection from "@/components/VideoSection";
 
 const Home = () => {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
-      
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-bold text-essence-black mb-4 text-center">
