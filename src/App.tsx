@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -14,23 +13,29 @@ import CustomerService from "./pages/CustomerService";
 import NotFound from "./pages/NotFound";
 import SEOMetadata from "./components/SEOMetadata";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false, // Better for production
+    },
+  },
+});
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <SEOMetadata 
+      <SEOMetadata
         title="Community Agency for Content Creators & Models"
         description="EssenceFameFace is a community agency that helps models and content creators secure brand deals and monetize your content. Join our expert team to create quality ad videos for brands."
       />
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <div className="flex flex-col min-h-screen">
           <Navbar />
           <main className="flex-grow">
             <Routes>
-              <Route path="/" element={<Index />} />
+              <Route index element={<Index />} />
               <Route path="/home" element={<Home />} />
               <Route path="/contract" element={<Contract />} />
               <Route path="/registration" element={<Registration />} />

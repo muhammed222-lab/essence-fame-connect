@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { Check, ArrowRight } from "lucide-react";
 
 interface HeroSectionProps {
   showGetStarted?: boolean;
@@ -8,206 +9,190 @@ interface HeroSectionProps {
 
 const HeroSection = ({ showGetStarted = true }: HeroSectionProps) => {
   return (
-    <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden landing-gradient">
-      {/* Enhanced animated background */}
-      <div className="absolute inset-0 bg-essence-black -z-10 overflow-hidden">
+    <div className="relative min-h-[80vh] flex items-center justify-center bg-essence-black overflow-hidden">
+      {/* Subtle animated gradient background */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
         <motion.div
-          className="absolute top-0 left-0 w-full h-full opacity-15"
+          className="absolute inset-0 bg-gradient-to-br from-essence-black via-essence-black/90 to-essence-orange/20"
           animate={{
-            background: [
-              "radial-gradient(circle at 30% 50%, rgba(239, 68, 68, 0.6), transparent 70%)",
-              "radial-gradient(circle at 70% 50%, rgba(255, 193, 7, 0.6), transparent 70%)",
-              "radial-gradient(circle at 50% 30%, rgba(59, 130, 246, 0.6), transparent 70%)",
-            ],
+            opacity: [0.9, 1, 0.9],
           }}
           transition={{
-            duration: 12,
+            duration: 8,
             repeat: Infinity,
             repeatType: "reverse",
           }}
         />
-        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5 mix-blend-overlay" />
       </div>
 
+      {/* Grid texture overlay */}
+      <div className="absolute inset-0 -z-10 opacity-5 bg-[url('/grid-pattern.svg')]"></div>
+
       <div className="container mx-auto px-6 py-20 md:py-32 z-10">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-10">
-          {/* Enhanced logo animation container */}
-          <motion.div
-            className="w-full md:w-1/2"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="relative max-w-md mx-auto">
-              <motion.div
-                className="blob-shape bg-essence-orange/90 w-[300px] h-[300px] md:w-[400px] md:h-[400px] mx-auto rounded-full overflow-hidden flex items-center justify-center shadow-2xl shadow-essence-orange/30"
-                animate={{
-                  borderRadius: [
-                    "60% 40% 30% 70%/60% 30% 70% 40%",
-                    "50% 50% 30% 70%/55% 45% 55% 45%",
-                    "40% 60% 70% 30%/40% 50% 50% 60%",
-                  ],
-                }}
-                transition={{
-                  duration: 10,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                }}
-              >
-                <motion.div
-                  className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center"
-                  animate={{
-                    scale: [0.98, 1.02, 0.98],
-                  }}
-                  transition={{
-                    duration: 8,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                  }}
-                >
-                  <motion.img
-                    src="/favicon.png"
-                    alt="Essence FameFace Logo"
-                    className="w-32 h-32 mb-4 drop-shadow-lg"
-                  />
-                  <motion.p className="text-white font-medium px-4 text-sm md:text-base">
-                    Essence FameFace connects creators with premium brands. Our
-                    experts help you monetize content and secure deals that
-                    elevate your career.
-                  </motion.p>
-                </motion.div>
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/10 to-transparent" />
-              </motion.div>
-
-              {/* Floating particles */}
-              {[...Array(8)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className="absolute rounded-full bg-essence-cream/80"
-                  style={{
-                    width: Math.random() * 10 + 5 + "px",
-                    height: Math.random() * 10 + 5 + "px",
-                    top: `${Math.random() * 100}%`,
-                    left: `${Math.random() * 100}%`,
-                  }}
-                  animate={{
-                    y: [0, (Math.random() - 0.5) * 50],
-                    x: [0, (Math.random() - 0.5) * 30],
-                    opacity: [0.6, 1, 0.6],
-                  }}
-                  transition={{
-                    duration: Math.random() * 5 + 5,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                    ease: "easeInOut",
-                  }}
-                />
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Text content */}
-          <motion.div
-            className="w-full md:w-1/2 text-center md:text-left"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            <motion.h1
-              className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
-              initial={{ y: 10 }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.5 }}
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+          {/* Content Section */}
+          <div className="lg:w-1/2 space-y-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
             >
-              <span className="text-essence-cream">Monetize</span> Your <br />
-              <span className="text-essence-orange">Creative Talent</span>
-            </motion.h1>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                Elevate Your{" "}
+                <span className="text-essence-orange">Creative Business</span>
+              </h1>
+              <p className="text-xl text-gray-300 mt-6 mb-8 max-w-lg">
+                EssenceFameFace bridges the gap between exceptional talent and
+                premium brands. Our platform simplifies partnerships while
+                maximizing your earning potential.
+              </p>
+              <img
+                src="/handfull.png"
+                alt="handfull"
+                width={300}
+                height={200}
+                className="m-auto"
+              />
+            </motion.div>
 
-            <motion.p
-              className="text-xl md:text-2xl text-gray-300 mb-8 space-y-4"
+            {/* Key Benefits */}
+            <motion.div
+              className="space-y-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
             >
-              <span className="block">
-                Join the{" "}
-                <span className="font-semibold text-essence-cream">
-                  5,000+ creators
-                </span>{" "}
-                already earning with brand partnerships
-              </span>
-              <span className="block text-lg">
-                We match you with premium brands looking for your exact creative
-                skills
-              </span>
-            </motion.p>
+              {[
+                "Guaranteed payment protection",
+                "Direct access to premium brands",
+                "Transparent contract terms",
+                "Dedicated creator support",
+              ].map((benefit, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <Check className="w-5 h-5 mt-0.5 text-essence-orange flex-shrink-0" />
+                  <span className="text-gray-300">{benefit}</span>
+                </div>
+              ))}
+            </motion.div>
 
+            {/* CTA Buttons */}
             {showGetStarted && (
               <motion.div
-                initial={{ opacity: 0, y: 10 }}
+                className="flex flex-col sm:flex-row gap-4 pt-4"
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
-                className="flex flex-col sm:flex-row gap-4"
               >
                 <Link to="/home" className="flex-1">
                   <Button
                     size="lg"
-                    className="w-full bg-essence-orange hover:bg-essence-orange/90 text-white text-lg px-8 py-6 rounded-full transition-all hover:scale-[1.02] shadow-lg hover:shadow-essence-orange/30"
+                    className="w-full bg-essence-orange hover:bg-essence-orange/90 text-white text-lg px-8 py-6 rounded-lg transition-all hover:scale-[1.02]"
                   >
-                    Start Earning Today →
+                    Start Earning <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>
                 <Link to="/registration" className="flex-1">
                   <Button
                     size="lg"
                     variant="outline"
-                    className="w-full border-essence-cream hover:text-white hover:bg-essence-cream/10 text-lg px-8 py-6 rounded-full transition-all hover:scale-[1.02]"
+                    className="w-full border-gray-600 hover:border-essence-cream text-black hover:text-black text-lg px-8 py-6 rounded-lg transition-all hover:scale-[1.02]"
                   >
-                    Join Our Community
+                    Explore Benefits
                   </Button>
                 </Link>
               </motion.div>
             )}
 
+            {/* Trust Indicators */}
             <motion.div
-              className="mt-8 flex flex-col sm:flex-row gap-6 justify-center md:justify-start"
+              className="pt-8 flex items-center flex-wrap gap-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
+              transition={{ delay: 0.9 }}
             >
               <div className="flex items-center">
-                <div className="flex -space-x-2">
+                <div className="flex -space-x-3">
                   {[1, 2, 3].map((item) => (
-                    <motion.img
+                    <img
                       key={item}
                       src={`/creator-${item}.jpg`}
-                      className="w-10 h-10 rounded-full border-2 border-white"
+                      className="w-10 h-10 rounded-full border-2 border-essence-black"
                       alt="Creator"
-                      whileHover={{ scale: 1.2, zIndex: 10 }}
-                      transition={{ type: "spring", stiffness: 300 }}
                     />
                   ))}
                 </div>
-                <span className="ml-3 text-gray-300 text-sm">
-                  Trusted by top creators
+                <span className="ml-3 text-gray-400 text-sm">
+                  Trusted by 5,000+ creators
                 </span>
               </div>
-
-              <div className="flex items-center text-gray-300">
-                <svg
-                  className="w-5 h-5 mr-2 text-essence-orange"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <span>Premium brand deals</span>
-              </div>
             </motion.div>
+          </div>
+
+          {/* Logo Display */}
+          <motion.div
+            className="lg:w-1/2 flex justify-center"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="relative w-full max-w-md">
+              <motion.div
+                className="aspect-square rounded-2xl bg-gradient-to-br from-essence-orange/10 to-essence-cream/5 border border-essence-orange/20 backdrop-blur-sm p-8 flex items-center justify-center"
+                animate={{
+                  boxShadow: [
+                    "0 0 0 rgba(239, 68, 68, 0)",
+                    "0 0 20px rgba(239, 68, 68, 0.1)",
+                    "0 0 0 rgba(239, 68, 68, 0)",
+                  ],
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                }}
+              >
+                <motion.img
+                  src="/favicon.png"
+                  alt="Essence FameFace Logo"
+                  className="w-64 h-64 object-contain"
+                  animate={{
+                    y: [0, -10, 0],
+                  }}
+                  transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                  }}
+                />
+              </motion.div>
+
+              {/* Floating elements */}
+              <motion.div
+                className="absolute -top-6 -left-6 w-24 h-24 rounded-full bg-essence-orange/10 border border-essence-orange/20"
+                animate={{
+                  scale: [1, 1.1, 1],
+                  opacity: [0.6, 0.8, 0.6],
+                }}
+                transition={{
+                  duration: 7,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                }}
+              />
+              <motion.div
+                className="absolute -bottom-6 -right-6 w-20 h-20 rounded-full bg-essence-cream/10 border border-essence-cream/20"
+                animate={{
+                  scale: [1, 1.1, 1],
+                  opacity: [0.6, 0.8, 0.6],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  delay: 2,
+                }}
+              />
+            </div>
           </motion.div>
         </div>
       </div>
