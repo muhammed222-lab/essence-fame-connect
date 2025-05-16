@@ -1,62 +1,92 @@
-
 import VideoSection from "@/components/VideoSection";
 
 const Registration = () => {
   return (
     <div className="min-h-screen bg-white">
       <div className="container mx-auto py-16 px-6">
-        <h1 className="text-4xl font-bold text-essence-black mb-6 text-center">Registration Guide</h1>
+        <h1 className="text-4xl font-bold text-essence-black mb-6 text-center">
+          Registration Guide
+        </h1>
         <div className="h-1 w-24 bg-essence-orange mx-auto mb-12"></div>
-        
+
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8 border border-gray-100 mb-16">
-          <h2 className="text-2xl font-semibold mb-6 text-essence-black">How to Register</h2>
-          
+          <h2 className="text-2xl font-semibold mb-6 text-essence-black">
+            How to Register
+          </h2>
+
           <div className="space-y-6">
             <p className="text-lg">
-              Joining the EssenceFameFace community is simple and straightforward. Follow these steps to create your account and start connecting with brands:
+              Joining the EssenceFameFace community is simple and
+              straightforward. Please follow the steps below carefully to
+              complete your registration.
             </p>
-            
+
             <ol className="list-decimal pl-6 space-y-6">
               <li className="pl-2">
-                <h3 className="font-semibold text-xl mb-2">Create Your Account</h3>
-                <p>Click the "Get Started" button on our homepage and fill in your basic information including name, email, and password. Verify your email address through the confirmation link we send.</p>
+                <h3 className="font-semibold text-xl mb-2">
+                  Create Your Account
+                </h3>
+                <p>
+                  Create a TikTok account or use an already existing account.
+                  This account will be used for posting your content ads.
+                </p>
               </li>
-              
+
               <li className="pl-2">
-                <h3 className="font-semibold text-xl mb-2">Build Your Profile</h3>
-                <p>Upload a professional profile picture and cover image that represent your personal brand. Fill in your bio, highlighting your niche, expertise, and what makes you unique.</p>
+                <h3 className="font-semibold text-xl mb-2">
+                  Make the Registration Fee Payment
+                </h3>
+                <p>
+                  Make your payment to the directory account provided below.
+                  Attach your payment receipt along with a facecard picture
+                  showing your address location and TikTok handle, then send all
+                  the details to our email.
+                </p>
               </li>
-              
+
               <li className="pl-2">
-                <h3 className="font-semibold text-xl mb-2">Connect Your Platforms</h3>
-                <p>Link your social media accounts to showcase your follower count, engagement rates, and content style. This helps brands understand your audience and reach.</p>
+                <h3 className="font-semibold text-xl mb-2">
+                  Identification Number
+                </h3>
+                <p>
+                  Once we receive your payment receipt and details, you will
+                  automatically receive an identification number. This ID
+                  represents your complete profile and will be used to identify
+                  you among other registered members.
+                </p>
               </li>
-              
+
               <li className="pl-2">
-                <h3 className="font-semibold text-xl mb-2">Set Your Rates</h3>
-                <p>Establish your pricing for different types of content collaborations. You can always adjust these rates for specific opportunities.</p>
-              </li>
-              
-              <li className="pl-2">
-                <h3 className="font-semibold text-xl mb-2">Complete Verification</h3>
-                <p>Go through our creator verification process to earn a verified badge, which increases your credibility with brands on the platform.</p>
+                <h3 className="font-semibold text-xl mb-2">Fee Details</h3>
+                <p>
+                  <strong>Fee:</strong> 🇳🇬5,000 &nbsp;🇬🇭50 &nbsp;🇿🇦70 &nbsp;🇨🇦10
+                  &nbsp;🇺🇸10
+                </p>
+                <p>
+                  <strong>Account Number:</strong> 6820019324 (Moniepoint MFB)
+                </p>
+                <p>
+                  <strong>Email:</strong> essencefameace@gmail.com
+                </p>
               </li>
             </ol>
-            
+
             <div className="bg-essence-cream p-6 rounded-md">
-              <h3 className="font-semibold text-xl mb-2 text-essence-black">Important Registration Tips:</h3>
+              <h3 className="font-semibold text-xl mb-2 text-essence-black">
+                Additional Registration Tips:
+              </h3>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Use high-quality images for your profile</li>
-                <li>Be specific about your niche and target audience</li>
-                <li>Highlight your unique content style and values</li>
-                <li>Showcase your best work in your portfolio section</li>
-                <li>Keep your engagement metrics up to date</li>
+                <li>Use high-quality images for your profile.</li>
+                <li>Be specific about your niche and target audience.</li>
+                <li>Highlight your unique content style and values.</li>
+                <li>Showcase your best work in your portfolio.</li>
+                <li>Keep your engagement metrics updated.</li>
               </ul>
             </div>
           </div>
         </div>
-        
-        <VideoSection 
+
+        <VideoSection
           title="Registration Tutorial"
           description="Watch our step-by-step video guide on how to register and set up your profile on EssenceFameFace."
         />

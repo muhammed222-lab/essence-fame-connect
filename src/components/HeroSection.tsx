@@ -1,3 +1,4 @@
+/* eslint-disable no-irregular-whitespace */
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -42,9 +43,12 @@ const HeroSection = ({ showGetStarted = true }: HeroSectionProps) => {
                 <span className="text-essence-orange">Creative Business</span>
               </h1>
               <p className="text-xl text-gray-300 mt-6 mb-8 max-w-lg">
-                EssenceFameFace bridges the gap between exceptional talent and
-                premium brands. Our platform simplifies partnerships while
-                maximizing your earning potential.
+                Essence_FameFace is a community agency that helps models and
+                content creators secure brand deals and monetise your contents,
+                Our team of experts helps secure brand deals for content
+                creators and models who have the creative minds and skill to
+                create quality ads videos for brands. Be part of the community
+                and monetise your contents.
               </p>
               <img
                 src="/handfull.png"
