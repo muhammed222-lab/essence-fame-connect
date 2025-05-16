@@ -66,7 +66,7 @@ const Registration = () => {
                   <strong>Account Number:</strong> 6820019324 (Moniepoint MFB)
                 </p>
                 <p>
-                  <strong>Email:</strong> essencefameace@gmail.com
+                  <strong>Email:</strong> essencefameface@gmail.com
                 </p>
               </li>
             </ol>

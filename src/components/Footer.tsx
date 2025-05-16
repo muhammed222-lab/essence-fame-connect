@@ -80,9 +80,9 @@ const Footer = () => {
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
                 <span className="text-gray-300">
-                  Ogun State
+                  Lekki
                   <br />
-                  Ijebu Igbo
+                  Lagos
                 </span>
               </li>
               <li className="flex items-center gap-3">
