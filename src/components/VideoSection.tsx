@@ -1,19 +1,43 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 interface VideoSectionProps {
   title: string;
   description: string;
   videoUrl?: string;
-  placeholder?: boolean;
+  posterUrl?: string;
   ctaText?: string;
 }
 
 const VideoSection = ({
   title,
   description,
-  videoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  placeholder = true,
+  videoUrl = "/EssenceFameFace.mp4",
+  posterUrl = "/EssenceFameFacePoster.jpg",
 }: VideoSectionProps) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const previewRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.25 }
+    );
+    if (videoRef.current && isVisible) {
+      observer.observe(videoRef.current);
+    } else if (previewRef.current && !isVisible) {
+      observer.observe(previewRef.current);
+    }
+    return () => observer.disconnect();
+  }, [isVisible]);
+
   return (
     <section className="py-16 bg-essence-cream">
       <div className="container mx-auto px-6">
@@ -26,9 +50,22 @@ const VideoSection = ({
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="video-container shadow-lg">
-            {placeholder ? (
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-essence-black/10">
+          <div className="video-container shadow-lg relative">
+            {isVisible ? (
+              <video
+                ref={videoRef}
+                src={videoUrl}
+                poster={posterUrl}
+                title="Video player"
+                controls
+                preload="metadata"
+                className="w-full"
+              />
+            ) : (
+              <div
+                ref={previewRef}
+                className="absolute inset-0 flex flex-col items-center justify-center bg-essence-black/10"
+              >
                 <div className="w-20 h-20 rounded-full bg-essence-orange/90 flex items-center justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -49,13 +86,6 @@ const VideoSection = ({
                   Video Preview
                 </p>
               </div>
-            ) : (
-              <iframe
-                src={videoUrl}
-                title="Video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
             )}
           </div>
         </div>
