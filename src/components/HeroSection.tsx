@@ -126,7 +126,7 @@ const HeroSection = ({ showGetStarted = true }: HeroSectionProps) => {
                   ))}
                 </div>
                 <span className="ml-3 text-gray-400 text-sm">
-                  Trusted by 5,000+ creators
+                  Trusted by 1,023+ creators
                 </span>
               </div>
             </motion.div>
