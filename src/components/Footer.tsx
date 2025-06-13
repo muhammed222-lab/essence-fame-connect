@@ -187,12 +187,12 @@ const Footer = () => {
       {/* Fixed WhatsApp Icon for Easy Contact */}
       <div className="fixed bottom-4 right-4 z-50 p-4">
         <a
-          href="https://wa.me/2348146714675"
+          href="https://t.me/essence_iconic"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center bg-white justify-center w-16 h-16 rounded-full shadow-lg hover:shadow-2xl"
         >
-          <img src="/whatsapp.png" alt="whatsapp icon" className="w-12 h-12" />
+          <img src="/telegram.png" alt="telegram icon" className="w-12 h-12" />
         </a>
       </div>
     </>
