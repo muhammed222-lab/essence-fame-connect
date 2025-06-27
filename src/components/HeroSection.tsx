@@ -97,7 +97,7 @@ const HeroSection = ({ showGetStarted = true }: HeroSectionProps) => {
                     size="lg"
                     className="w-full bg-essence-orange hover:bg-essence-orange/90 text-white text-lg px-8 py-6 rounded-lg transition-all hover:scale-[1.02]"
                   >
-                    Start Earning <ArrowRight className="ml-2 w-5 h-5" />
+                    Join Community <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>
                 <Link to="/registration" className="flex-1">
