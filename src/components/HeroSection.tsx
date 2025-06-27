@@ -204,6 +204,29 @@ const HeroSection = ({ showGetStarted = true }: HeroSectionProps) => {
             </div>
           </motion.div>
         </div>
+        <h1 className="text-2xl font-bold mt-8 text-white">Clients</h1>
+        {/* Chat-style Client List */}
+        <motion.div
+          className="mt-8 bg-white/5 rounded-xl p-4 shadow-lg space-y-3"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2 }}
+        >
+          {[
+            { id: "BB19", name: "Alo Agelica Eyinade" },
+            { id: "BC11", name: "Udechukwu Ihuoma" },
+          ].map((client) => (
+            <div
+              key={client.id}
+              className="bg-essence-black/70 hover:bg-essence-orange/20 transition rounded-lg px-4 py-3"
+            >
+              <div className="font-semibold text-essence-orange">
+                ID NO: {client.id}
+              </div>
+              <div className="text-gray-200 text-sm mt-1">({client.name})</div>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </div>
   );
