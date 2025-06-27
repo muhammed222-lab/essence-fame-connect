@@ -87,7 +87,12 @@ const HeroSection = ({ showGetStarted = true }: HeroSectionProps) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
               >
-                <Link to="/home" className="flex-1">
+                <Link
+                  to="https://chat.whatsapp.com/EuO5cUepgUELgR9xRHvWvc"
+                  className="flex-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button
                     size="lg"
                     className="w-full bg-essence-orange hover:bg-essence-orange/90 text-white text-lg px-8 py-6 rounded-lg transition-all hover:scale-[1.02]"
