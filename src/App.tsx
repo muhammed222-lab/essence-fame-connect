@@ -12,7 +12,7 @@ import Registration from "./pages/Registration";
 import CustomerService from "./pages/CustomerService";
 import NotFound from "./pages/NotFound";
 import SEOMetadata from "./components/SEOMetadata";
-import Contents from "./pages/contents";
+import Contents from "./pages/Contents";
 
 const queryClient = new QueryClient({
   defaultOptions: {
