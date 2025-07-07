@@ -9,10 +9,10 @@ import Index from "./pages/Index";
 import Home from "./pages/Home";
 import Contract from "./pages/Contract";
 import Registration from "./pages/Registration";
-import Contents from "./pages/contents";
 import CustomerService from "./pages/CustomerService";
 import NotFound from "./pages/NotFound";
 import SEOMetadata from "./components/SEOMetadata";
+import Contents from "./pages/contents";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -40,7 +40,7 @@ const App = () => (
               <Route path="/home" element={<Home />} />
               <Route path="/contract" element={<Contract />} />
               <Route path="/registration" element={<Registration />} />
-              <Route path="/contents" element={<Contents />} />
+              <Route path="/Contents" element={<Contents />} />
               <Route path="/customer-service" element={<CustomerService />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
