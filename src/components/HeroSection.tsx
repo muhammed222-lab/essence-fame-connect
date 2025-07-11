@@ -9,11 +9,21 @@ interface HeroSectionProps {
   showGetStarted?: boolean;
 }
 
+const clients = [
+  { id: "BB19", name: "Alo Agelica Eyinade" },
+  { id: "BC11", name: "Udechukwu Ihuoma" },
+];
+
 const HeroSection = ({ showGetStarted = true }: HeroSectionProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   // State to track video status for custom controls
   const [isPlaying, setIsPlaying] = useState(true); // Video starts playing
   const [isMuted, setIsMuted] = useState(true); // Video starts muted for autoplay
+
+  // Move openRows state here
+  const [openRows, setOpenRows] = useState<boolean[]>(() =>
+    clients.map(() => false)
+  );
 
   // Function to toggle play/pause
   const togglePlayPause = () => {
@@ -191,7 +201,7 @@ const HeroSection = ({ showGetStarted = true }: HeroSectionProps) => {
               >
                 <motion.video
                   ref={videoRef}
-                  src="/ADVERTS3.mp4"
+                  src="/EssenceFameFace.mp4"
                   autoPlay
                   loop
                   muted // Start muted to allow autoplay
@@ -261,7 +271,46 @@ const HeroSection = ({ showGetStarted = true }: HeroSectionProps) => {
         </div>
         <h1 className="text-2xl font-bold mt-8 text-white">Clients</h1>
         {/* Chat-style Client List */}
-        <motion.div /* ...omitted for brevity, no changes here... */ />
+        <motion.div
+          className="mt-8 bg-white/5 rounded-xl p-4 shadow-lg space-y-3"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2 }}
+        >
+          {clients.map((client, idx) => (
+            <div
+              key={client.id}
+              className="bg-essence-black/70 hover:bg-essence-orange/20 transition rounded-lg px-4 py-3"
+            >
+              <button
+                type="button"
+                className="font-semibold text-essence-orange focus:outline-none"
+                onClick={() =>
+                  setOpenRows((prev) =>
+                    prev.map((v, i) => (i === idx ? !v : v))
+                  )
+                }
+              >
+                ID NO: {client.id}
+              </button>
+              <motion.div
+                initial={false}
+                animate={{
+                  height: openRows[idx] ? "auto" : 0,
+                  opacity: openRows[idx] ? 1 : 0,
+                }}
+                transition={{ duration: 0.3 }}
+                style={{ overflow: "hidden" }}
+              >
+                {openRows[idx] && (
+                  <div className="text-gray-200 text-sm mt-1">
+                    ({client.name})
+                  </div>
+                )}
+              </motion.div>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </div>
   );

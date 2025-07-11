@@ -26,6 +26,36 @@ const videoData = [
     title: "Our Agency's Mission",
     description: "Discover the vision and community behind Essence FameFace.",
   },
+  {
+    id: 4,
+    src: "/essencefameface3.mp4",
+    title: "Additional Insights",
+    description: "More details about our agency's approach.",
+  },
+  {
+    id: 5,
+    src: "/essencefameface4.mp4",
+    title: "Additional Insights",
+    description: "More details about our agency's approach.",
+  },
+  {
+    id: 6,
+    src: "/essencefameface5.mp4",
+    title: "Additional Insights",
+    description: "More details about our agency's approach.",
+  },
+  {
+    id: 7,
+    src: "/essencefameface6.mp4",
+    title: "Additional Insights",
+    description: "More details about our agency's approach.",
+  },
+  {
+    id: 8,
+    src: "/essencefameface7.mp4",
+    title: "Additional Insights",
+    description: "More details about our agency's approach.",
+  },
 ];
 
 const Contents = () => {
@@ -104,7 +134,7 @@ const Contents = () => {
                 loop
                 muted={isMuted}
                 playsInline
-                className="w-full h-full object-cover"
+                className="w-full h-full object-fit"
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
                 onError={handleVideoError} // Added error handler
