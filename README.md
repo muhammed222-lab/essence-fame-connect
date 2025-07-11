@@ -1,74 +1,26 @@
-# Welcome to your essencefameface
+# EssenceFameFace Project
 
-project
+This project is developed exclusively for [EssenceFameFace.com.ng](https://essencefameface.com.ng) by Muhammed Olayemi.
 
-## Project info
+---
 
-**URL**: https://essencefameface
+## Project Information
 
-.dev/projects/f6ec1c62-f615-426d-b24e-b268378c7167
+**Project Dashboard:**  
+[essencefameface.dev/projects/f6ec1c62-f615-426d-b24e-b268378c7167](https://essencefameface.dev/projects/f6ec1c62-f615-426d-b24e-b268378c7167)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## Editing Policy
 
-\*\*Use essencefameface
+> **Note:**  
+> This is a private project. The codebase is not open source and cannot be edited or reused by the public.
 
-\*\*
+All rights to view, modify, or deploy this project are reserved for the EssenceFameFace.com.ng team and authorized personnel only.
 
-Simply visit the [essencefameface
+---
 
-Project](https://essencefameface
-
-.dev/projects/f6ec1c62-f615-426d-b24e-b268378c7167) and start prompting.
-
-Changes made via essencefameface
-
-will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in essencefameface
-
-.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-# Step 1: Clone the repository using the project's Git URL.
-
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-
-npm run dev
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
+## Technologies Used
 
 - Vite
 - TypeScript
@@ -76,22 +28,20 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+---
 
-Simply open [essencefameface
+## Deployment
 
-](https://essencefameface
+Deployment is managed internally via the [EssenceFameFace Project Dashboard](https://essencefameface.dev/projects/f6ec1c62-f615-426d-b24e-b268378c7167).
 
-.dev/projects/f6ec1c62-f615-426d-b24e-b268378c7167) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my essencefameface
+## Custom Domain
 
-project?
+To connect a custom domain, go to Project > Settings > Domains in the dashboard and follow the instructions.
 
-Yes, you can!
+[Read the step-by-step guide](https://docs.essencefameface.dev/tips-tricks/custom-domain#step-by-step-guide)
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.essencefameface
-
-.dev/tips-tricks/custom-domain#step-by-step-guide)
+\*\*This project is not open source and is not
